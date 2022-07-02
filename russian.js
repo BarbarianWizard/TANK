@@ -1,5 +1,5 @@
 function russian(x, y) {
-    let element = newSprite('./assets/enemies/static.gif')
+    let element = sprite('./assets/enemies/static.gif')
     element.style.zIndex = 1;
     
     let direction = null;

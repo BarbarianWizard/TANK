@@ -1,13 +1,15 @@
-function shoot(element) {
-    const element = newSprite(`assets/player/javelin.gif`)
-    element.style.position = defender(x,y)
-
-    function path(left, bottom) {
+function shoot() {
+    const element = sprite(`assets/player/javelin.gif`)
+    element.style.bottom = `${dy}px`
+    element.style.left = `${dx}px`
+    console.log(dx, dy)
+   
+  function path(left, bottom) {
         element.style.left = left + 'px'
         element.style.bottom = bottom + 'px'
     }
 
-    function shootWithSpace(left, bottom, callback){
+    function shootWithSpace(left, bottom){
         let direction = 'north';
         let x = left;
         let y = bottom;
@@ -23,16 +25,9 @@ function shoot(element) {
             element.style.bottom = y + 'px'
         }
         
-        setInterval(launch, 1)
+        // setInterval(launch, 1)
         
-        document.addEventListener('keydown', function(e){
-            if(e.repeat) return;
         
-            if(e.key === 'Space'){
-                direction = 'north'
-            }
-            console.log('space pressed')
-        })
                 
     }
 

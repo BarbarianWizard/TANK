@@ -1,17 +1,22 @@
+let dx 
+let dy
+
 function defender(x, y) {
-    const element = newSprite(`assets/player/static.gif`)
+    const element = sprite(`assets/player/static.gif`)
     element.style.zIndex = 1;
 
+    
+    
     function handleDirectionChange(direction) {
         if (direction === null) {
             element.src = `assets/player/static.gif`
         }
         
-         if (direction === 'west') {
+        if (direction === 'west') {
             element.src = `assets/player/left.gif`
         }
         
-         if (direction === 'east') {
+        if (direction === 'east') {
             element.src = `assets/player/right.gif`
         }
                 console.log(direction)
@@ -19,7 +24,8 @@ function defender(x, y) {
 
     move(element).withArrowKeys(x, y, handleDirectionChange)
 
+    
     return {
         element: element
     }
-}
+} 
