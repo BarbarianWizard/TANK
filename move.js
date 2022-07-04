@@ -1,28 +1,34 @@
+let gx
+let gy
+
 function move(element) {
     element.style.position = 'fixed'
 
-    function moveToCoordinates(left, bottom) {
+     function coordinates(left, bottom) {
         element.style.left = left + 'px'
         element.style.bottom = bottom + 'px'
-    }
+    } 
 
     function moveWithArrowKeys(left, bottom, callback){
         let direction = null;
-        dx = left;
-        dy = bottom;
+        gx = left;
+        gy = bottom;
 
-        element.style.left = dx + 'px'
-        element.style.bottom = dy + 'px'
+        element.style.left = gx + 'px'
+        element.style.bottom = gy + 'px'
         
         function moveCharacter(){ 
             if(direction === 'west'){
-                dx-=1
+                gx-=1
             }
             if(direction === 'east'){
-                dx+=1
+                gx+=1
             }
-            element.style.left = dx + 'px'
-            element.style.bottom = dy + 'px'
+            if(direction === 'south'){
+                gy-=1
+            }
+            element.style.left = gx + 'px'
+            element.style.bottom = gy + 'px'
         }
         
         setInterval(moveCharacter, 1)
@@ -48,7 +54,7 @@ function move(element) {
     }
 
     return {
-        to: moveToCoordinates,
+        to: coordinates,
         withArrowKeys: moveWithArrowKeys
     }
 }

@@ -1,10 +1,16 @@
-function russian(x, y) {
-    let element = sprite('./assets/enemies/static.gif')
-    element.style.zIndex = 1;
+function russian(gx, gy) {
+    let x = gx
+    let y = gy
     
+    let tank = sprite('./assets/enemies/static.gif')
+    tank.style.zIndex = 1;
     let direction = null;
+    
+    
 
     function invade() {
+        
+
         if (direction === 'west') {
             x -= 1
         }
@@ -14,38 +20,43 @@ function russian(x, y) {
         if (direction === 'south') {
             y -= 1
         }
-        element.style.left = x + 'px'
-        element.style.bottom = y + 'px'
+        tank.style.left = x + 'px'
+        tank.style.bottom = y + 'px'
+
+        // grid(tank, gx, gy)
     }
 
     setInterval(invade, 1)
 
     function turnEast() {
         direction = 'east'
-        element.src = `./assets/enemies/static.gif`
+        tank.src = `./assets/enemies/static.gif`
     }
   
 
     function turnWest() {
         direction = 'west'
-        element.src = `./assets/enemies/static.gif`
+        tank.src = `./assets/enemies/static.gif`
     }
 
     function turnSouth() {
         direction = 'south'
-        element.src = `./assets/enemies/static.gif`
+        tank.src = `./assets/enemies/static.gif`
     }
 
     function stop() {
         direction = null
-        element.src = `./assets/enemies/static.gif`
+        tank.src = `./assets/enemies/static.gif`
     }
 
+    
     return {
-        element: element,
+        tank: tank,
         turnWest: turnWest,
         turnEast: turnEast,
         turnSouth: turnSouth,
         stop: stop
     }
+
+
 }

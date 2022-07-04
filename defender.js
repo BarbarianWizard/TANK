@@ -1,6 +1,3 @@
-let dx 
-let dy
-
 function defender(x, y) {
     const element = sprite(`assets/player/static.gif`)
     element.style.zIndex = 1;

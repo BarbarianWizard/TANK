@@ -1,10 +1,10 @@
-const hitbox = function (x, y, w) {
+/* function oldbox(x, y, w) {
     this.x = x != null ? x : 0;
     this.y = y != null ? x : 0;
     this.width = w != null ? w : 50;
 
 
-    this.contains = function (x, y) {
+    function contains(x, y) {
         if (
             x >= this.x &&
             x <= this.x + this.width &&
@@ -13,7 +13,7 @@ const hitbox = function (x, y, w) {
         return true;
         else return false;
     };
-    this.intersects = function (hitbox) {
+    function intersects(hitbox) {
         if (
             this.contains(hitbox.x, hitbox.y) ||
             this.contains(hitbox.x + hitbox.width, hitbox.y)
@@ -28,8 +28,8 @@ const hitbox = function (x, y, w) {
     return false;
     };
 
-    this.updateHitboxPosition = function (x, y) {
+    function updateHitboxPosition(x, y) {
         this.x = x != null ? x : 0;
         this.y = y != null ? x : 0;
     }
-}
+} */
