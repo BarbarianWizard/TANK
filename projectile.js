@@ -10,6 +10,5 @@
        
 shoot(javelin).withSpace(gx, gy)
 
-grid(javelin, gx, gy)
-
  }
+ 

@@ -1,4 +1,4 @@
-/* function oldbox(x, y, w) {
+ function oldbox(x, y, w) {
     this.x = x != null ? x : 0;
     this.y = y != null ? x : 0;
     this.width = w != null ? w : 50;
@@ -32,4 +32,4 @@
         this.x = x != null ? x : 0;
         this.y = y != null ? x : 0;
     }
-} */
+} 

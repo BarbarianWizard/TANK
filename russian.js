@@ -1,3 +1,4 @@
+/*
 function russian(gx, gy) {
     let x = gx
     let y = gy
@@ -6,9 +7,12 @@ function russian(gx, gy) {
     tank.style.zIndex = 1;
     let direction = null;
     
-    
 
-    function invade() {
+    
+    //move(element).coordinates(x, y)
+
+
+     function invade() {
         
 
         if (direction === 'west') {
@@ -23,11 +27,11 @@ function russian(gx, gy) {
         tank.style.left = x + 'px'
         tank.style.bottom = y + 'px'
 
-        // grid(tank, gx, gy)
+        // 
     }
 
-    setInterval(invade, 1)
-
+    setInterval(invade, 1)}
+/*
     function turnEast() {
         direction = 'east'
         tank.src = `./assets/enemies/static.gif`
@@ -59,4 +63,4 @@ function russian(gx, gy) {
     }
 
 
-}
+}  */
