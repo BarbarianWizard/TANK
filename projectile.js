@@ -9,6 +9,7 @@
         
        
 shoot(javelin).withSpace(gx, gy)
+return javelin;
 
  }
  

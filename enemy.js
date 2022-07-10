@@ -5,7 +5,13 @@ class Enemy {
     // position
     element.style.left = x + 'px'
     element.style.bottom = y + 'px'
-    }
+
+    this.element = element;
+  }
+
+  getElement() {
+    return this.element;
+  }
 
   //function hit(){
 

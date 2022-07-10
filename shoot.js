@@ -9,24 +9,13 @@ function shoot(element) {
         element.style.bottom = y
         
         function launch(){ 
-             if(direction === 'north'){
-                y+=1
-             }
+             y+=1
             element.style.left = x + 14 + 'px'
             element.style.bottom = y + 'px'
         }
 
-        
-
-          setInterval(launch, 1)
-        
-          document.addEventListener('keydown', function(e){
-             if(e.key === ' '){
-                 direction = 'north'
-             }
-             console.log('space pressed')
-         })
-                        
+        setInterval(launch, 1)
+                               
     }
 
     return {
