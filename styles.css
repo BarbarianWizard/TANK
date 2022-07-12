@@ -1,6 +1,17 @@
-.field{
-    margin:auto;
-    border:10px;
-    padding:auto;
+.battlefield{
+    position: relative;
+    width: 600px;
+    height: 630px;
+    margin: 75px;
+    border: 75px;
+    padding: 75px;
+    opacity: 90%;
+background-image: url("./assets/stoneroad.png");
 
+}
+
+ body {
+background-image: url("./assets/UkraineFlag.png");
+background-size: cover;
+background-color: blue;
 }
